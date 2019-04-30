@@ -175,10 +175,6 @@
         [self.scrollDisplayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     }
     else if (gesture.state == UIGestureRecognizerStateChanged) {
-        // pan draggingView up and down
-        if (location.y >= 0 && location.y <= self.contentSize.height + 50) {
-            self.draggingView.center = CGPointMake(self.center.x, location.y);
-        }
         
         // scrolling
         CGRect rect = self.bounds;
